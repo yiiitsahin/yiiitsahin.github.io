@@ -1,0 +1,9 @@
+{
+  "name": "yiiit-com",
+  "version": "1.0.0",
+  "description": "Yiğit Şahin'in web sitesi. Kendisinin yiiitsahin takma adıyla ortalıkta dolandığı söylentileri hiçte asılsız değildir.",
+  "private": true,
+  "main": "index.html",
+  "author": "\"Yiğit Şahin (https://yiiit.com/)",
+  "license": "ISC"
+}
