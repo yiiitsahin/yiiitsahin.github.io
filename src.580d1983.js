@@ -173,15 +173,15 @@ var mouse = {
   radius: 75
 };
 window.addEventListener("mousemove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.x - canvas.offsetLeft;
+  mouse.y = event.y - canvas.offsetTop;
 });
 window.addEventListener("touchmove", function (event) {
-  var x = event.touches[0].clientX;
-  var y = event.touches[0].clientY;
+  var x = event.touches[0].pageX;
+  var y = event.touches[0].pageX;
   var r = event.touches[0].radiusX;
-  mouse.x = x;
-  mouse.y = y;
+  mouse.x = x - canvas.offsetLeft;
+  mouse.y = y - canvas.offsetTop;
   mouse.radius = r;
 });
 
@@ -285,4 +285,4 @@ window.addEventListener("resize", function () {
   animate();
 });
 },{"./logo":"A64P"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.580d1983.js.map
+//# sourceMappingURL=src.1f9c99c7.js.map

@@ -7,10 +7,9 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #231F20;
-}
+  background-color: #231F20;}
 html *, body * {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=/style.e78c7683.css.map */
+/*# sourceMappingURL=style.e78c7683.css.map */
