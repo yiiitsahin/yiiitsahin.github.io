@@ -177,13 +177,20 @@ window.addEventListener("mousemove", function (event) {
   mouse.y = event.y - canvas.offsetTop;
 });
 window.addEventListener("touchmove", function (event) {
-  var x = event.touches[0].pageX;
-  var y = event.touches[0].pageX;
-  var r = event.touches[0].radiusX;
-  mouse.x = x - canvas.offsetLeft;
-  mouse.y = y - canvas.offsetTop;
-  mouse.radius = r;
+  handleTouchAndMouseEvent(event);
 });
+
+function handleTouchAndMouseEvent(e) {
+  if (e.type === "touchstart" || e.type === "touchmove" || e.type === "touchend" || e.type === "touchcancel") {
+    var evt = typeof e.originalEvent === "undefined" ? e : e.originalEvent;
+    var touch = evt.touches[0] || evt.changedTouches[0];
+    mouse.x = touch.pageX;
+    mouse.y = touch.pageY;
+  } else if (e.type === "mousedown" || e.type === "mouseup" || e.type === "mousemove" || e.type === "mouseover" || e.type === "mouseout" || e.type === "mouseenter" || e.type === "mouseleave") {
+    mouse.x = e.clientX - canvas.offsetTop;
+    mouse.y = e.clientY - canvas.offsetTop;
+  }
+}
 
 var Particle = /*#__PURE__*/function () {
   function Particle(x, y) {
@@ -285,4 +292,4 @@ window.addEventListener("resize", function () {
   animate();
 });
 },{"./logo":"A64P"}]},{},["Focm"], null)
-//# sourceMappingURL=src.1f9c99c7.js.map
+//# sourceMappingURL=src.fd86e32b.js.map
