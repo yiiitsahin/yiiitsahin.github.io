@@ -186,6 +186,7 @@ function handleTouchAndMouseEvent(e) {
     var touch = evt.touches[0] || evt.changedTouches[0];
     mouse.x = touch.pageX;
     mouse.y = touch.pageY;
+    mouse.radius = 40;
   } else if (e.type === "mousedown" || e.type === "mouseup" || e.type === "mousemove" || e.type === "mouseover" || e.type === "mouseout" || e.type === "mouseenter" || e.type === "mouseleave") {
     mouse.x = e.clientX - canvas.offsetTop;
     mouse.y = e.clientY - canvas.offsetTop;
@@ -292,4 +293,4 @@ window.addEventListener("resize", function () {
   animate();
 });
 },{"./logo":"A64P"}]},{},["Focm"], null)
-//# sourceMappingURL=src.fd86e32b.js.map
+//# sourceMappingURL=src.8b933c72.js.map
