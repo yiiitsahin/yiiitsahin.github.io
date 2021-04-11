@@ -176,6 +176,14 @@ window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
 });
+window.addEventListener("touchmove", function (event) {
+  var x = event.touches[0].clientX;
+  var y = event.touches[0].clientY;
+  var r = event.touches[0].radiusX;
+  mouse.x = x;
+  mouse.y = y;
+  mouse.radius = r;
+});
 
 var Particle = /*#__PURE__*/function () {
   function Particle(x, y) {
@@ -277,4 +285,4 @@ window.addEventListener("resize", function () {
   animate();
 });
 },{"./logo":"A64P"}]},{},["Focm"], null)
-//# sourceMappingURL=/pixel-effects.4d969b87.js.map
+//# sourceMappingURL=/src.580d1983.js.map
